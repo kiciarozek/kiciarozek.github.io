@@ -1,0 +1,244 @@
+<html>
+    <head>
+        <title> 
+            Ciąg Fibonacciego
+        </title>
+
+        <link rel="stylesheet" type="text/css" href="ciag.css">
+        <style>
+            
+            .update {
+                border: 2px dashed var(--main-color);
+                padding: 5px;
+            }
+
+            main {
+                background-color: transparent !important;
+            }
+
+            .content {
+                background-color: var(--background);
+            }
+
+            .title {
+                margin-top: var(--content-spacing);
+            }
+
+            .title:first-child {
+                margin-top: 0 !important;
+            }
+
+            .yw-content {
+                text-align: center;
+            }
+            
+        </style>
+        <meta http-equiv="Content-Language" content="pl" >
+        <meta charset="UTF-8" >
+    </head>
+
+    <body>
+        <main>
+            <div id="container">
+                <div class="topbar"></div>
+
+                <div id="flex">
+                    <div class="wrapper">
+                        <h1 class="main_title" align="center"> Ciag Fibonacciego</h1>
+
+                        <div class="title">&nbsp; Opis</div>
+
+                        <div class="content">
+                            <h3>
+                                Ciąg Fibonacciego – ciąg liczb naturalnych określony rekurencyjnie w sposób następujący:
+                                </br>
+                                Pierwszy wyraz jest równy 0, drugi jest równy 1, każdy następny jest sumą dwóch poprzednich.
+                                </br>
+                                Formalnie:
+                            </h3>
+
+                            <img src="ciong.png">
+
+                            <h3>
+                                Kolejne wyrazy tego ciągu nazywane są liczbami Fibbonacciego. Zaliczanie zera do elementów ciągu Fibonacciego zależy od umowy - część autorów definiuje ciąg od F1 = F2 = 1.
+                                </br>
+                                Pierwsze dwadzieścia wyrazów ciągu Fibonacciego to:
+                            </h3>
+
+                            <img src="ciong2.png">
+
+                            <h3> 
+                                Ciąg został omówiony w roku 1202 przez Leonarda z Pizy, zwanego Fibonaccim,
+                                w dziele Liber abaci jako rozwiązanie zadania o rozmnażaniu się królików. Nazwę „ciąg Fibonacciego” spopularyzował w XIX w. Édouard Lucas.
+                            </h3>
+
+                            <img src="blokowykodciag.png">
+                        </div>
+
+                        <div class="title">&nbsp; Wzór Bineta</div>
+
+                        <div class="content">
+                            <h3>Jawny wzór na n-ty wyraz ciągu Fibonacciego podany w 1843 r. przez J.P.M. Bineta możemy otrzymać, korzystając z metody funkcji tworzących.
+                                </br>
+                                Niech
+                            </h3>
+
+                            <img src="obliczenia1.png">
+
+                            <h3>
+                                Funkcja tworząca dla tego ciągu ma postać
+                            </h3>
+
+                            <img src="obliczenia2.png">
+
+                            <h3>
+                                Podstawiając
+                            </h3>
+
+                            <img src="obliczenia3.png">
+
+                            <h3>
+                                otrzymujemy:
+                            </h3>
+
+                            <img src="obliczenia4.png">
+
+                            <h3>
+                                W szczególności,
+                            </h3>
+
+                            <img src="obliczenia5.png">
+
+                            <h3>
+                                Wyrażenie 
+                            </h3>
+
+                            <img src="obliczenia6.png">
+
+                            <h3>
+                                można przedstawić w prostszej postaci, mianowicie:
+                            </h3>
+
+                            <img src="obliczenia7.png">
+
+                            <h3>
+                                gdzie:
+                            </h3>
+
+                            <img src="obliczenia8.png">
+
+                            <h3>
+                                Wówczas:
+                            </h3>
+
+                            <img src="obliczenia9.png">
+
+                            <h3>
+                                a stąd:
+                            </h3>
+
+                            <img src="obliczenia10.png">
+
+                            <h3>
+                                Ponieważ
+                            </h3>
+
+                            <img src="jajco.png">
+
+                            <h3>
+                                wyprowadzony został ostatecznie tzw. wzór Bineta zwany czasem wzorem Eulera-Bineta:
+                            </h3>
+
+                            <img src="obliczenia11.png">
+
+                            <h3>
+                                Ponieważ drugi człon tego wyrażenia szybko zbiega do zera
+                            </h3>
+
+                            <img src="obliczenia12.png">
+                        </div>
+
+                        <div class="title">&nbsp; Własności</div>
+
+                        <div class="content">
+                            <h3>
+                                Sumy wyrazów tworzące ciąg Fibonacciego na trójkącie Pascala.
+                            </h3>
+
+                            <img src="trojkat.png">
+
+                            <h3>
+                                Ciąg kwadratów, których długości boków są kolejnymi liczbami Fibonacciego
+                            </h3>
+
+                            <img src="kwadraty.png">
+                        </div>
+
+                        <div class="title">&nbsp; Obliczanie liczb Fibonacciego</div>
+
+                        <div class="content">
+                            <h3>
+                                Teoretycznie wartości kolejnych wyrazów ciągu Fibonacciego mogą być obliczone wprost z definicji, jest to jednak metoda na tyle wolna,
+                                że stosowanie jej ma tylko sens dla niewielu początkowych wyrazów ciągu, nawet na bardzo szybkich komputerach. Wynika to z tego, że definicja Fn 
+                                wielokrotnie odwołuje się do wartości poprzednich wyrazów ciągów. Drzewo wywołań takiego algorytmu dla parametru n musi co najmniej Fn liści o wartości 1.
+                                Ponieważ ciąg Fibonacciego rośnie wykładniczo, oznacza to wyjątkowo słabą wydajność.
+                                Istnieje równie prosta i znacznie szybsza metoda. Obliczamy wartości ciągu po kolei: F0,F1,F2 i tak aż do Fn, za każdym razem korzystając z tego, co już obliczyliśmy.
+                                Nie trzeba nawet zapamiętywać wszystkich obliczonych dotychczas wartości, ponieważ wystarczą dwie ostatnie. Daje to złożoność liniową – o wiele lepszą od wykładniczej
+                                złożoności poprzedniej metody. Metoda ta może być postrzegana jako zastosowanie programowania dynamicznego.
+                            </h3>
+
+                            <img src="ciagpseudokod.png">
+
+                        </div>
+
+                        <div class="title">&nbsp; Graficzna reprezentacja dwójkowa</div>
+
+                        <div class="content">
+                            <h3>
+                                Jeśli kolejne wyrazy ciągu zapisać w systemie dwójkowym, jeden pod drugim, z wyrównaniem do prawej strony, to otrzymamy wydłużający się w dół trójkąt, którego elementy powtarzają się
+                                („czubek” pojawia się poniżej, przy prawej krawędzi, w coraz dłuższym rozwinięciu – pojawia się nad nim „biały trójkąt”), co czyni go podobnym do fraktala. Dla lepszej przejrzystości
+                                na rysunku obok wszystkie zera zastąpiono białymi punktami, a jedynki – czarnymi.
+                            </h3>
+
+                            <img src="bianrnycos.png">
+                        </div>
+
+                        <div class="title">&nbsp; Złota liczba</div>
+
+                        <div class="content">
+                            <h3>
+                                Granica ciągu (wartość, w której dowolnym otoczeniu znajdują się prawie wszystkie (tzn. wszystkie poza co najwyżej skończenie wieloma) wyrazy danego ciągu. Inaczej – wartość,
+                                dowolnie blisko której leżą wszystkie wyrazy ciągu o dostatecznie dużych wskaźnikach.):
+                            </h3>
+
+                            <img src="oblicz1.png">
+
+                            <h3>
+                                czyli ilorazów sąsiadujących ze sobą wyrazów ciągu Fibonacciego, to tzw. złota liczba lub złota proporcja definiowana jako dodatnie rozwiązanie równania:
+                            </h3>
+
+                            <img src="oblicz2.png">
+
+                            <h3>
+                                czyli
+                            </h3>
+
+                            <img src="oblicz3.png">
+                        </div>
+
+                        <div class="title">&nbsp; Liczby pierwsze w ciągu Fibonacciego</div>
+
+                        <div class="content">
+                            <h3>
+                                Niektóre z wyrazów ciągu Fibonacciego to liczby pierwsze, początkowe to: 2, 3, 5, 13, 89, 233, 1597, 28657, 514229.
+                                Problem, czy w ciągu Fibonacciego istnieje nieskończenie wiele liczb pierwszych, jak dotąd nie doczekał się rozstrzygnięcia (stan na styczeń 2023).
+                            </h3>
+                        </div>
+
+                        <a href="main.html" ><h1 class="main_title" align="center"> Powrót do głównej strony</h1></a>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </main>
+</html>

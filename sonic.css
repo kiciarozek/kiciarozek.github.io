@@ -1,0 +1,58 @@
+h1.main_title {
+    border-style: solid;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: #00ADB5;
+    background-color: #393E46;
+    border-radius: 10px;
+}
+
+body {
+  animation: 10000ms ease-in-out infinite color-change;
+}
+  
+@keyframes color-change {
+  0% {
+    background-color: #222831;
+  }
+  25% {
+    background-color: #262e3a;
+  }
+  50% {
+    background-color: #232e3d;
+  }
+  75% {
+    background-color: #262e3a;
+  }
+  100% {
+    background-color: #222831;
+  }
+}
+
+h3 {
+    color: #00ADB5;
+}
+
+div {
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    animation: 10000ms ease-in-out infinite colour-change;
+}
+@keyframes colour-change {
+  0% {
+      background-color: #EEEEEE;
+  }
+  25% {
+      background-color: #cccccc;
+  }
+  50% {
+      background-color: #b9b9b9;
+  }
+  75% {
+      background-color: #cccccc;
+  }
+  100% {
+      background-color:	#EEEEEE;
+  }
+}

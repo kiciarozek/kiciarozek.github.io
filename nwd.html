@@ -1,0 +1,136 @@
+<main>
+    <head>
+        <title> 
+            NWD
+        </title>
+
+        <link rel="stylesheet" type="text/css" href="nwd.css">
+
+        <style>
+            
+            .update {
+                border: 2px dashed var(--main-color);
+                padding: 5px;
+            }
+
+            main {
+                background-color: transparent !important;
+            }
+
+            .content {
+                background-color: var(--background);
+            }
+
+            .title {
+                margin-top: var(--content-spacing);
+            }
+
+            .title:first-child {
+                margin-top: 0 !important;
+            }
+
+            .yw-content {
+                text-align: center;
+            }
+            
+        </style>
+        <meta http-equiv="Content-Language" content="pl" >
+        <meta charset="UTF-8" >
+    </head>
+
+    <body>
+        
+        <div id="container">
+            <div class="topbar"></div>
+            <div id="flex">
+                <div class="wrapper">
+
+                    <h1 class="main_title" align="center"> NWD</h1>
+
+                    <div class="title">&nbsp; Opis</div>
+
+                    <div class="content">
+                        <h3>Najprostsza wersja algorytmu rozpoczyna się od wybrania dwóch liczb naturalnych, dla których należy wyznaczyć największy wspólny dzielnik. Następnie z tych dwóch liczb tworzymy nową parę: pierwszą z liczb jest liczba mniejsza, natomiast drugą jest różnica liczby większej i mniejszej. Proces ten jest powtarzany aż obie liczby będą sobie równe – wartość tych liczb to największy wspólny dzielnik wszystkich par liczb wcześniej wyznaczonych. Wadą tej wersji algorytmu jest duża liczba operacji odejmowania, które należy wykonać w przypadku, gdy różnica pomiędzy liczbami z pary jest znacząca.
+
+                            Operacja odejmowania mniejszej liczby od większej może zostać zastąpiona przez wyznaczanie reszty z dzielenia. W tej wersji nowa para liczb składa się z mniejszej liczby oraz reszty z dzielenia większej przez mniejszą. Algorytm kończy się w momencie, w którym jedna z liczb jest równa zero – druga jest wtedy największym wspólnym dzielnikiem.
+                        </h3>
+                    </div>
+
+                    <div class="title">&nbsp; Przykład z odejmowaniem</div>
+
+                    <div class="content">
+                        <h3>Załóżmy, że chcemy znaleźć największy wspólny dzielnik liczb 1989 oraz 867. Jeżeli od większej liczby odejmiemy liczbę mniejszą, wartość największego wspólnego dzielnika nie ulegnie zmianie. Ponieważ 1989 – 867 = 1122, nowa para liczb wygląda następująco:
+                            <br>
+                            1122, 867
+                            <br>
+                            Ponownie odejmujemy mniejszą liczbę od większej 1122 – 867 = 255, tworząc w ten sposób kolejną parę:
+                            <br>
+                            255, 867
+                            <br>
+                            867 nie jest już mniejszą liczbą. Stosując ten sam sposób, ponownie zmniejszamy wartość większej liczby o wartość mniejszej: 867 – 255 = 612, nowa para liczb to:
+                            <br>
+                            255, 612
+                            <br>
+                            Pierwsza liczba, 255, jest wciąż mniejsza, ponownie więc odejmujemy 255 od liczby większej: 612 – 255 = 357, więc kolejna para liczb to:
+                            <br>
+                            255, 357
+                            <br>
+                            357 – 255 = 102, kolejna para to:
+                            <br>
+                            255, 102
+                            <br>
+                            Teraz widać, że 255 jest większą liczbą, odejmujemy więc od niej 102, co daje nam parę:
+                            <br>
+                            153, 102
+                            <br>
+                            Odjęcie 102 od 153 tworzy nam kolejną parę:
+                            <br>
+                            51, 102.
+                            <br>
+                            Teraz odejmujemy 51 od 102, co daje nam:
+                            <br>
+                            51, 51
+                            <br>
+                            Ponieważ obie liczby są sobie równe, kolejne odejmowanie da nam zero. Oznacza to, że największym wspólnym dzielnikiem liczb 1989 i 867 jest liczba 51.
+                        </h3>
+                    </div>
+
+                    <div class="title">&nbsp; Przykład z dzieleniem</div>
+                    
+                    <div class="content">
+                        <h3>
+                            Wyznacz największy wspólny dzielnik liczb 282 i 78.
+                            <br>
+                            Rozwiązanie:
+                            <br>
+                            Zaczynamy od podzielenia liczby 282 przez liczbę 78 z resztą:
+                            <br>
+                            282:78=3, reszty 48
+                            <br>
+                            Otrzymaliśmy resztę różną od zera, zatem teraz podzielimy liczbę 78 przez resztę 48. Ten schemat będziemy powtarzać do momentu otrzymania reszty równej 0.
+                            <br>
+                            78:48=1, reszty 3048:30=1, reszty 1830:18=1, reszty 1218:12=1, reszty 612:6=2, reszty 0
+                            <br>
+                            Otrzymaliśmy resztę równą zero, zatem szukany NWD będzie równy ostatniej niezerowej reszcie:
+                            <br>
+                            NWD(282,78)=6
+                        </h3>            
+                    </div>
+
+                    <div class="title">&nbsp; Schematy blokowe</div>
+
+                    <div class="content">
+                        <img src="dzielenie.png"> 
+                        <img src="odejmowanie.png">
+                    </div>
+
+                    <a href="main.html" ><h1 class="main_title" align="center"> Powrót do głównej strony</h1></a>
+                </div>
+            </div>
+        </div>
+
+            
+        </div> 
+    </body>
+
+</main>

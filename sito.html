@@ -1,0 +1,111 @@
+<main>
+    <head>
+        <title> 
+            sito
+        </title>
+
+        <link rel="stylesheet" type="text/css" href="sito.css">
+        <style>
+            
+            .update {
+                border: 2px dashed var(--main-color);
+                padding: 5px;
+            }
+
+            main {
+                background-color: transparent !important;
+            }
+
+            .content {
+                background-color: var(--background);
+            }
+
+            .title {
+                margin-top: var(--content-spacing);
+            }
+
+            .title:first-child {
+                margin-top: 0 !important;
+            }
+
+            .yw-content {
+                text-align: center;
+            }
+            
+        </style>
+        <meta http-equiv="Content-Language" content="pl" >
+        <meta charset="UTF-8" >
+    </head>
+
+    <body>
+        
+        <div id="container">
+            <div class="topbar"></div>
+            <div id="flex">
+                <div class="wrapper">
+
+                    <h1 class="main_title" align="center"> Sito Eratostenesa </h1>
+
+                    <div class="title">&nbsp; Opis</div>
+
+                    <div class="content">
+                        <h3>Sito Eratostenesa – algorytm wyznaczania wszystkich liczb pierwszych mniejszych od danej, czyli z zadanego przedziału [2,n]. Opiera się na eliminacji liczb złożonych.
+                            Jest przypisywany Eratostenesowi z Cyreny, najpóźniej od XVIII wieku. Algorytm ten udoskonalono; powstały bardziej wydajne jak sito Atkina.
+                        </h3>
+                        <img src="Sieve_of_Eratosthenes_animation.gif">
+                    </div>
+
+                    <div class="title">&nbsp; Algorytm</div>
+
+                    <div class="content">
+                        <h3>
+                            Ze zbioru liczb naturalnych z przedziału [2,n], tj. {2,3,4...n}, wybieramy najmniejszą, czyli 2, i wykreślamy wszystkie jej wielokrotności większe od niej samej, to jest 4,6,8... 
+                        </h3>
+
+                        <img src="sito1.png">
+
+                        <h3>
+                            Z pozostałych liczb wybieramy najmniejszą niewykreśloną liczbę (3) i usuwamy wszystkie jej wielokrotności większe od niej samej: 6,9,12,..., przy czym nie przejmujemy się tym, że
+                            niektóre liczby (na przykład 6 czy 12) będą skreślane więcej niż raz
+                        </h3>
+
+                        <img src="sito2.png">
+
+                        <h3>
+                            Według tej samej procedury postępujemy dla liczby 5.
+                        </h3>
+                        
+                        <img src="sito3.png">
+
+                        <h3>
+                            Następnie dla 7 aż do sprawdzenia wszystkich niewykreślonych wcześniej liczb.
+                        </h3>
+
+                        <img src="sito4.png">
+
+                        <h3>
+                            Wykreślanie powtarzamy do momentu, gdy liczba i, której wielokrotność wykreślamy, będzie większa niż pierwiastek z n.
+                            Dla danej liczby n wszystkie niewykreślone liczby mniejsze, bądź równe n są liczbami pierwszymi.
+                        </h3>
+                        
+                        <img src="sito5.png">
+                    </div>
+
+                    <div class="title">&nbsp; Pseudokod</div>
+                    
+                    <div class="content">
+                        <h3>Powyższy algorytm można zapisać w postaci następującego pseudokodu:</h3>
+                        <img src="pseudokod.png">
+                    </div>
+
+                    <a href="main.html" ><h1 class="main_title" align="center"> Powrót do głównej strony</h1></a>
+                </div>
+            </div>
+        </div>
+
+            
+        </div> 
+    </body>
+
+
+</main>
